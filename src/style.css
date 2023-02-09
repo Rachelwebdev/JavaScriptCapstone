@@ -1,3 +1,87 @@
-.hello {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+.nav-menu {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-evenly;
+  border-bottom: 2px solid rgb(212, 162, 10);
+}
+
+li a {
+  color: black;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: 700ms ease-in-out;
+}
+
+a:hover {
+  cursor: pointer;
+  color: rgb(212, 162, 10);
+  border-color: rgb(212, 162, 10);
+  font-size: 1.5rem;
+}
+
+.main-section {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 1rem;
+  column-gap: 3rem;
+}
+
+.single-movie {
+  /* width: 70%; */
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.image-pic {
+  width: 100%;
+}
+
+.movie-title {
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+.desc {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.likes {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.comments-btn {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #fff;
+  font-weight: 600;
+  transition: 500ms ease-in-out;
+}
+
+.comments-btn:hover {
+  cursor: pointer;
+  color: rgb(212, 162, 10);
+  border-color: rgb(212, 162, 10);
+  font-size: 1.2rem;
+}
+
+footer {
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  border: 2px solid #000;
 }
