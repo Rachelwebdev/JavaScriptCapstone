@@ -1,14 +1,9 @@
-import _ from 'lodash';
-import './style.css';
+import "./style.css";
 
-function component() {
-  const element = document.createElement('div');
+import renderHomePage from "./modules/renderHomePage.js";
+import getLike from "./modules/getLikeData.js";
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
-
-  return element;
-}
-
-document.body.appendChild(component());
+window.addEventListener("load", () => {
+  renderHomePage();
+  getLike();
+});
