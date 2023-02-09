@@ -1,10 +1,11 @@
-import getMovieData from './getMovies.js';
+import getMovieData from "./getMovies.js";
+import renderPopup from "./renderPopup";
 
-const showContainer = document.querySelector('.movie-section');
-const commentMainBtn = document.getElementsByClassName('comments-btn');
+const showContainer = document.querySelector(".movie-section");
+// const commentMainBtn = document.getElementsByClassName("comments-btn");
 
 const renderHomePage = async () => {
-  showContainer.innerHTML = '';
+  showContainer.innerHTML = "";
   const shows = await getMovieData();
   shows.forEach((item) => {
     showContainer.innerHTML += `
@@ -22,9 +23,10 @@ const renderHomePage = async () => {
     `;
   });
   for (let i = 0; i < commentMainBtn.length; i += 1) {
-    commentMainBtn[i].addEventListener('click', (e) => {
+    commentMainBtn[i].addEventListener("click", (e) => {
       e.preventDefault();
-      // commentPopup();
+      showContainer.style.display = "none";
+      renderPopup(e.target.id);
     });
   }
 };
