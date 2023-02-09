@@ -113,10 +113,6 @@ footer {
   margin-right: 2rem;
 }
 
-.close-icon {
-  width: 40px;
-}
-
 .close-icon:hover {
   cursor: pointer;
 }
