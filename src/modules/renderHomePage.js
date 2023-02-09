@@ -1,11 +1,7 @@
-import getMovieData from './getMovies.js';
-
 const showContainer = document.querySelector('.movie-section');
-const commentMainBtn = document.getElementsByClassName('comments-btn');
 
-const renderHomePage = async () => {
+const renderHomePage = async (shows) => {
   showContainer.innerHTML = '';
-  const shows = await getMovieData();
   shows.forEach((item) => {
     showContainer.innerHTML += `
         <div class="show-${item.id} single-movie">
@@ -21,12 +17,6 @@ const renderHomePage = async () => {
       </div>
     `;
   });
-  for (let i = 0; i < commentMainBtn.length; i += 1) {
-    commentMainBtn[i].addEventListener('click', (e) => {
-      e.preventDefault();
-      // commentPopup();
-    });
-  }
 };
 
 export default renderHomePage;

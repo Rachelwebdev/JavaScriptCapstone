@@ -59,6 +59,11 @@ a:hover {
   align-items: center;
 }
 
+.close-icon {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
 .likes {
   display: flex;
   flex-direction: column;
@@ -84,4 +89,45 @@ footer {
   margin-bottom: 0.5rem;
   padding: 1rem;
   border: 2px solid #000;
+}
+
+/* COMMENT POPUP SECTION */
+
+.popup-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.movie-img-sect {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.movie-img {
+  width: 400px;
+  height: 400px;
+  margin-right: 2rem;
+}
+
+.close-icon:hover {
+  cursor: pointer;
+}
+
+.movie-popup-title {
+  margin: 2rem 0 1.5rem;
+}
+
+.movie-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.movie-features p {
+  font-size: 1rem;
 }
