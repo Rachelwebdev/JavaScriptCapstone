@@ -2,7 +2,7 @@ import getMovieData from "./getMovies.js";
 import renderPopup from "./renderPopup";
 
 const showContainer = document.querySelector(".movie-section");
-// const commentMainBtn = document.getElementsByClassName("comments-btn");
+const commentMainBtn = document.getElementsByClassName("comments-btn");
 
 const renderHomePage = async () => {
   showContainer.innerHTML = "";
