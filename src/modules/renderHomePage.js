@@ -23,10 +23,10 @@ const renderHomePage = async () => {
     `;
   });
   for (let i = 0; i < commentMainBtn.length; i += 1) {
-    commentMainBtn[i].addEventListener("click", (e) => {
+    commentMainBtn[i].addEventListener("click", () => {
       e.preventDefault();
       showContainer.style.display = "none";
-      renderPopup(e.target.id);
+      renderPopup();
     });
   }
 };

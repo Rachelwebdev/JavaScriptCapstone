@@ -7,7 +7,6 @@ const closePopup = document.getElementsByClassName(".close-icon");
 const renderPopup = async (e) => {
   popupContainer.innerHTML = "";
   const shows = await getMovieData();
-  console.log(shows);
   shows.forEach((item) => {
     popupContainer.innerHTML += `
         <div class="show-${item.id} movie-img-sect">
@@ -26,7 +25,6 @@ const renderPopup = async (e) => {
 
   for (let i = 0; i < closePopup.length; i += 1) {
     closePopup[i].addEventListener("click", (e) => {
-      console.log("comment poped");
       e.preventDefault();
       popupContainer.style.display = "none";
       renderHomePage();
