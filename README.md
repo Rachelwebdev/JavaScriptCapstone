@@ -32,14 +32,13 @@
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
-  - [❓ FAQ (OPTIONAL) ](#-faq-optional-)
   - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 SHOWS.COM <a name="about-project"></a>
 
-**SHOWS.COM** is a fan page for the very popular TV shows. The project is the second Capstone project in the Microverse curriculum. The project uses Webpack for bundling, TVMaze API for episode details and Involvement API for comments and likes for each episode.
+**SHOWS.COM** is a webpage for the very popular TV shows. The project is the second Capstone project in the Microverse curriculum. The project uses Webpack for bundling, TVMaze API for episode details and Involvement API for comments and likes for each episode.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -67,7 +66,7 @@
 
 - [Live Demo Link](https://ram1117.github.io/capstone-2-fansite/dist/)
 
-A video presentation of the project can be found in this [Video Link](https://drive.google.com/file/d/1yt9o9e48uP9G_0RLcycF9AQdtIunEBnK/view?usp=share_link)
+A video presentation of the project can be found in this [Video Link](https://drive.google.com/file/d/1DmzJsqTNP60CFShydc14jUIZJu6FAXDg/view?usp=share_link)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -185,18 +184,6 @@ If you like this project please provide a ⭐️ to the [project github repo](ht
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 We would like to thank [TVMaze](https://www.tvmaze.com) for the free API service.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-- **Can images and other assets used in the project redistributed or reused?**
-
-  - The images are obtained from TVmaze API and may be subject to copyright. Please refer the API documentation for more details.
-
-- **Can this project be modified?**
-
-  - I am open to collaborating, please contact me using my twitter or github handle.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

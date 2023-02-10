@@ -43,13 +43,15 @@ a:hover {
 }
 
 .single-movie {
-  /* width: 70%; */
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
   padding: 1rem;
   gap: 1rem;
+}
+
+.fa-heart:hover {
+  cursor: pointer;
 }
 
 .image-pic {
@@ -65,11 +67,6 @@ a:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-.close-icon {
-  font-weight: 900;
-  font-size: 1.5rem;
 }
 
 .likes {
@@ -121,21 +118,42 @@ footer {
   margin-right: 2rem;
 }
 
+.close-icon {
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: rgb(212, 162, 10);
+  transition: 500ms ease-in-out;
+}
+
 .close-icon:hover {
   cursor: pointer;
+  font-size: 2.2rem;
 }
 
 .movie-popup-title {
   margin: 2rem 0 1.5rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: rgb(212, 162, 10);
+  text-decoration: underline;
 }
 
-.movie-features {
+/* .movie-features {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 1rem;
   margin-bottom: 2rem;
+} */
+
+.movie-features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
 }
 
 .movie-features p {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
