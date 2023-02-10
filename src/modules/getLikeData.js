@@ -1,7 +1,6 @@
-import displayLikes from "./displayLikes.js";
+import displayLikes from './displayLikes.js';
 
-const url =
-  "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/XStiGEvTbIVhBJcUTGCN/likes/";
+const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/XStiGEvTbIVhBJcUTGCN/likes/';
 const getLikes = async () => {
   let likes = [];
   const response = await fetch(url);

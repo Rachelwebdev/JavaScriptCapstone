@@ -1,50 +1,50 @@
-import "./style.css";
+import './style.css';
 
-import renderHomePage from "./modules/renderHomePage.js";
-import getMovieData from "./modules/getMovies.js";
-import renderPopup from "./modules/renderPopup.js";
-import getLike from "./modules/getLikeData.js";
-import postLike from "./modules/postLikeData.js";
-import displayLike from "./modules/displayLikes.js";
+import renderHomePage from './modules/renderHomePage.js';
+import getMovieData from './modules/getMovies.js';
+import renderPopup from './modules/renderPopup.js';
+import getLike from './modules/getLikeData.js';
+import postLike from './modules/postLikeData.js';
 
-const showContainer = document.querySelector(".movie-section");
-const popupContainer = document.querySelector(".popup-display");
+const showContainer = document.querySelector('.movie-section');
+const popupContainer = document.querySelector('.popup-display');
 
-window.addEventListener("load", async () => {
+const addEvents = () => {
+  const heartIcon = document.querySelectorAll('.fa-heart');
+  heartIcon.forEach((element) => {
+    element.addEventListener('click', () => {
+      postLike(element.dataset.id);
+    });
+  });
+};
+
+window.addEventListener('load', async () => {
   const shows = await getMovieData();
   renderHomePage(shows);
   addEvents();
   getLike();
-  document.addEventListener("click", async (e) => {
-    const button = e.target.closest(".comments-btn");
-    const closeButton = e.target.closest(".close-icon");
+  document.addEventListener('click', async (e) => {
+    const button = e.target.closest('.comments-btn');
+    const closeButton = e.target.closest('.close-icon');
 
     if (button) {
       const selectedShow = shows.filter(
-        (it) => it.id.toString() === button.id.toString()
+        (it) => it.id.toString() === button.id.toString(),
       )[0];
-      const { id, image, name, language, genres, rating, schedule } =
-        selectedShow;
-      showContainer.style.display = "none";
-      popupContainer.style.display = "block";
+      const {
+        id, image, name, language, genres, rating, schedule,
+      } = selectedShow;
+      showContainer.style.display = 'none';
+      popupContainer.style.display = 'block';
       renderPopup(id, image, name, language, genres, rating, schedule);
     }
 
     if (closeButton) {
-      popupContainer.style.display = "none";
-      showContainer.style.display = "grid";
+      popupContainer.style.display = 'none';
+      showContainer.style.display = 'grid';
       renderHomePage(shows);
       addEvents();
       getLike();
     }
   });
 });
-
-const addEvents = () => {
-  const heartIcon = document.querySelectorAll(".fa-heart");
-  heartIcon.forEach((element) => {
-    element.addEventListener("click", () => {
-      postLike(element.dataset.id);
-    });
-  });
-};
