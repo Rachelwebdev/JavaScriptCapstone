@@ -5,7 +5,7 @@ const displayLike = async (likes) => {
     const elementid = `show-${like.item_id}`;
     const showLike = document.getElementById(elementid);
     if (showLike !== null) {
-      const likeCount = showLike.querySelector(".like-count");
+      const likeCount = showLike.querySelector('.like-count');
       likeCount.innerHTML = `${like.likes}`;
     }
   });
