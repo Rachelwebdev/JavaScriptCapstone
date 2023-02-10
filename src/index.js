@@ -5,9 +5,11 @@ import getMovieData from './modules/getMovies.js';
 import renderPopup from './modules/renderPopup.js';
 import getLike from './modules/getLikeData.js';
 import postLike from './modules/postLikeData.js';
+import homePageCount from './modules/homePageCounter.js';
 
 const showContainer = document.querySelector('.movie-section');
 const popupContainer = document.querySelector('.popup-display');
+const showCount = document.querySelector('.show-count');
 
 const addEvents = () => {
   const heartIcon = document.querySelectorAll('.fa-heart');
@@ -47,4 +49,7 @@ window.addEventListener('load', async () => {
       getLike();
     }
   });
+
+  const showContent = document.querySelectorAll('.single-movie');
+  showCount.innerHTML = homePageCount(showContent);
 });
