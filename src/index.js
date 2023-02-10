@@ -51,5 +51,4 @@ window.addEventListener("load", async () => {
 
   const showContent = document.querySelectorAll(".single-movie");
   showCount.innerHTML = homePageCount(showContent);
-  showCount.innerHTML = count;
 });

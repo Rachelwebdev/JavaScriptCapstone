@@ -1,7 +1,6 @@
 const homePageCount = () => {
   const movieContainer = document.querySelector(".movie-section");
-  const count = movieContainer.childNodes.length;
-  console.log(count);
+  const count = movieContainer.childElementCount;
   return count;
 };
 
