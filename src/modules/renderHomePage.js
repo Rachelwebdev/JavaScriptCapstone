@@ -4,7 +4,7 @@ const renderHomePage = async (shows) => {
   showContainer.innerHTML = "";
   shows.forEach((item) => {
     showContainer.innerHTML += `
-        <div class="show-${item.id} single-movie">
+        <div id="show-${item.id}" class="single-movie">
         <img src=${item.image.medium} alt="movie-image" class="image-pic" />
         <div class="desc">
           <p class="movie-title">${item.name}</p>

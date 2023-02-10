@@ -4,11 +4,11 @@ import getLikes from "./getLikeData.js";
 const displayLike = async (likes) => {
   console.log(likes);
   likes.forEach((like) => {
-    console.log(like.likes);
-    const showLike = document.getElementById(like.item_id);
+    const elementid = `show-${like.item_id}`;
+    const showLike = document.getElementById(elementid);
     if (showLike !== null) {
       const likeCount = showLike.querySelector(".like-count");
-      likeCount.textContent = `(${like.likes})`;
+      likeCount.innerHTML = `(${like.likes})`;
     }
   });
 };

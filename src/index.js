@@ -5,16 +5,16 @@ import getMovieData from "./modules/getMovies.js";
 import renderPopup from "./modules/renderPopup.js";
 import getLike from "./modules/getLikeData.js";
 import postLike from "./modules/postLikeData.js";
-import displayLike from "./modules/displayLikes";
+import displayLike from "./modules/displayLikes.js";
 
 const showContainer = document.querySelector(".movie-section");
 const popupContainer = document.querySelector(".popup-display");
-const heartIcon = document.getElementsByClassName("fa-heart");
-console.log(heartIcon);
 
 window.addEventListener("load", async () => {
   const shows = await getMovieData();
   renderHomePage(shows);
+  addEvents();
+  getLike();
   document.addEventListener("click", async (e) => {
     const button = e.target.closest(".comments-btn");
     const closeButton = e.target.closest(".close-icon");
@@ -34,15 +34,17 @@ window.addEventListener("load", async () => {
       popupContainer.style.display = "none";
       showContainer.style.display = "grid";
       renderHomePage(shows);
+      addEvents();
+      getLike();
     }
   });
-
-  getLike();
 });
 
-for (let i = 0; i < heartIcon.length; i++) {
-  heartIcon[i].addEventListener("click", () => {
-    console.log("clicked");
-    displayLike(likes);
+const addEvents = () => {
+  const heartIcon = document.querySelectorAll(".fa-heart");
+  heartIcon.forEach((element) => {
+    element.addEventListener("click", () => {
+      postLike(element.dataset.id);
+    });
   });
-}
+};
