@@ -64,7 +64,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://rachelwebdev.github.io/JavaScriptCapstone/dist/)
 
 A video presentation of the project can be found in this [Video Link](https://drive.google.com/file/d/1DmzJsqTNP60CFShydc14jUIZJu6FAXDg/view?usp=share_link)
 
