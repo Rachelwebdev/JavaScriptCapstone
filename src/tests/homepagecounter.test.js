@@ -29,8 +29,7 @@ describe("test for movie: ", () => {
         <li class="single-movie"></li>
         <li class="single-movie"></li>
         `;
-    const showContent = document.querySelectorAll(".single-movie");
-    const movies = homePageCount(showContent);
+    const movies = homePageCount();
     expect(movies).toBe(5);
   });
 
