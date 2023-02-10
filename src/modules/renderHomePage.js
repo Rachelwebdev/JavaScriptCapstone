@@ -1,7 +1,7 @@
-const showContainer = document.querySelector(".movie-section");
+const showContainer = document.querySelector('.movie-section');
 
 const renderHomePage = async (shows) => {
-  showContainer.innerHTML = "";
+  showContainer.innerHTML = '';
   shows.forEach((item) => {
     showContainer.innerHTML += `
         <li id="show-${item.id}" class="single-movie">
